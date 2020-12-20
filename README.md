@@ -27,6 +27,12 @@ ___
 - Shutdown hotkey that calls a bash script
 
 - Take screenshot using `flameshot gui` command
+
+- Added Spotify startup app initalizing in "music" workspace
+
+- Added `Anaconda` hotkey
+
+- Changed workspace-2 tiling method
 ___
 ___
 
@@ -48,3 +54,4 @@ ___
 
 - Dissabled `rspace0`
 
+- Deleted blanckspaces in sidebar

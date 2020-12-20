@@ -10,7 +10,6 @@ local awesome, client, mouse, screen, tag = awesome, client, mouse, screen, tag
 local ipairs, string, os, table, tostring, tonumber, type = ipairs, string, os, table, tostring, tonumber, type
 
 
-
 local gears         = require("gears")
 local awful         = require("awful")
                       require("awful.autofocus")
@@ -108,12 +107,12 @@ awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4" }
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    awful.layout.suit.floating,
+    awful.layout.suit.fair.horizontal,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     --awful.layout.suit.tile.top,
     --awful.layout.suit.fair,
-    --awful.layout.suit.fair.horizontal,
+    --awful.layout.suit.floating,
     --awful.layout.suit.floating,
     --awful.layout.suit.spiral.dwindle,
     --awful.layout.suit.max,
@@ -442,10 +441,10 @@ globalkeys = my_table.join(
               {description = "show weather", group = "widgets"}),
 
     -- Brightness
-    awful.key({ }, "F5", function () os.execute("") end,
-              {description = "increase brightness", group = "hotkeys"}),
-    awful.key({ }, "F4", function () os.execute("") end,
-              {description = "decrease brightness", group = "hotkeys"}),
+    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 5") end,
+              {description = "+5%", group = "hotkeys"}),
+    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 5") end,
+              {description = "-5%", group = "hotkeys"}),
 
     -- ALSA volume control
     awful.key({  }, "F3",
@@ -557,6 +556,11 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "c", function () 
     awful.util.spawn("code") end,
               {description = "open visual studio", group = "launcher"}),
+    -- Anaconda-Navigator-Hotkey
+    awful.key({ modkey, "Control" }, "c", function () 
+    awful.util.spawn("/home/genisgui/anaconda3/bin/anaconda-navigator") end,
+              {description = "open anaconda-navigator", group = "launcher"}),
+    
     -- Apagar ordinador
     awful.key({ altkey  }, "m", function () 
     awful.util.spawn("bash /home/genisgui/.config/awesome/poweroff") end,
@@ -708,6 +712,8 @@ awful.rules.rules = {
     -- Set Firefox to always map on the first tag on screen 1.
     { rule = { class = "Firefox" },
       properties = { screen = 1, tag = awful.util.tagnames[1] } },
+     
+      
    
 -- }}}
 
@@ -792,11 +798,13 @@ autorun = true
 autorunApps =
 {
    "killall xfce4-volumed",
-   "killall xfce4-powe-manager",
+   "killall xfce4-power-manager",
    "killall compton",
    "xfce4-power-manager",
    "compton",
    "xfce4-volumed",
+   --"bash /home/genisgui/.config/awesome/spotify.sh",
+   "nitrogen --set-scaled --random /usr/share/backgrounds/wallpapers-derek-taylor/wallpapers/",
 
 }
 if autorun then
@@ -804,6 +812,3 @@ if autorun then
        awful.util.spawn(autorunApps[app])
    end
 end
-
-
-
