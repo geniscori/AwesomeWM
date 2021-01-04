@@ -55,3 +55,5 @@ ___
 - Dissabled `rspace0`
 
 - Deleted blanckspaces in sidebar
+
+- Dissabled useless gaps from 5 to 0.
