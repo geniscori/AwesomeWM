@@ -1,0 +1,17 @@
+#!/bin/bash
+ 
+shopt -s expand_aliases
+shutdownChoice=$(zenity --height=300 --list --radiolist --text "Te'n vols anar?" --column "" --column "Action:" \
+    TRUE "Log out" \
+    FALSE "Restart" \
+    FALSE "Shut down" \
+    FALSE "Suspend" \
+    )
+
+case "$shutdownChoice" in
+ "Log out") echo 'awesome.quit()' | awesome-client ;;
+ Restart) systemctl reboot;;
+ "Shut down") systemctl poweroff;;
+ Suspend) systemctl suspend;;
+ *) echo Cancelled;;
+esac

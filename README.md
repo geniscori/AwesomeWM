@@ -12,7 +12,7 @@ ___
 ---
 ### Code modifications:
 ---
-- Changed terminal, editor and gui-editor: 
+- Changed terminal, editor and gui-editor 
 
 - Changed number of workspaces and order of layouts
 
@@ -33,6 +33,8 @@ ___
 - Added `Anaconda` hotkey
 
 - Changed workspace-2 tiling method
+
+- Deleted screen-locker hotkey
 ___
 ___
 
@@ -56,4 +58,4 @@ ___
 
 - Deleted blanckspaces in sidebar
 
-- Dissabled useless gaps from 5 to 0.
+- Dissabled useless gaps from 5 to 0
