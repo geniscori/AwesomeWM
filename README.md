@@ -35,6 +35,8 @@ ___
 - Changed workspace-2 tiling method
 
 - Deleted screen-locker hotkey
+
+- Edited workspace layouts
 ___
 ___
 
