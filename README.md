@@ -37,6 +37,8 @@ ___
 - Deleted screen-locker hotkey
 
 - Edited workspace layouts
+
+- Added `Set wallpaper manually` hotkey
 ___
 ___
 

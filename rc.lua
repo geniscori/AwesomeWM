@@ -434,7 +434,7 @@ globalkeys = my_table.join(
               {description = "dropdown application", group = "launcher"}),
 
     -- Widgets popups
-    awful.key({ altkey, }, "c", function () awful.util.spawn("gnome-calendar") end,
+    awful.key({ altkey,"Control" }, "c", function () awful.util.spawn("gnome-calendar") end,
               {description = "show calendar", group = "widgets"}),
     awful.key({ altkey, }, "h", function () if beautiful.fs then beautiful.fs.show(7) end end,
               {description = "show filesystem", group = "widgets"}),
@@ -553,6 +553,10 @@ globalkeys = my_table.join(
     awful.key({ altkey }, "p", function () 
     awful.util.spawn("nitrogen --restore") end,
               {description = "set previous wallpaper", group = "wallpapers"}),
+    --Choose Wallpaper
+    awful.key({ altkey }, "c", function () 
+        awful.util.spawn("nitrogen") end,
+                  {description = "choose wallpaper", group = "wallpapers"}),
     -- Obrir Visual Studio
     awful.key({ modkey }, "c", function () 
     awful.util.spawn("code") end,
