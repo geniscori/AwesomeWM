@@ -39,6 +39,8 @@ ___
 - Edited workspace layouts
 
 - Added `Set wallpaper manually` hotkey
+
+- Added `SPOTIFY` SKIP/PREVIOUS/STOP hotkeysz
 ___
 ___
 

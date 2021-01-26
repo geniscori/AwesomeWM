@@ -466,7 +466,19 @@ globalkeys = my_table.join(
             beautiful.volume.update()
         end,
         {description = "volume mute", group = "hotkeys"}),
-     -- HE ELIMINAT ALGUNES LÍNIES DE CODI JA QUE "CREC" QUE NO LES NECESSITO DEGUT QUE TINC xfce4-volumed i xfce4-power-manager
+
+     -- SPOTIFY HOTKEYS , avançar, retrocedir, pausa, stop
+    awful.key({ "Control" }, "Return", function () awful.util.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause", false) end,
+    {description = "Pause/Resume song", group = "spotify"}),
+    
+    awful.key({ "Control" }, "Right", function () awful.util.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next", false) end,
+    {description = "Next song", group = "spotify"}),
+
+    awful.key({ "Control" }, "Left", function () awful.util.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous", false) end,
+    {description = "Previous song", group = "spotify"}),
+   
+    awful.key({ "Control" }, "Escape", function () awful.util.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop", false) end,
+    {description = "Stop current song", group = "spotify"}),
 
     -- MPD control
     awful.key({ altkey, "Control" }, "Up",
