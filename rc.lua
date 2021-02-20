@@ -91,7 +91,7 @@ local themes = {
     "vertex",          -- 10
 }
 
-local chosen_theme = themes[10]
+local chosen_theme = themes[3]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 --local terminal     = "urxvtc"
@@ -819,6 +819,7 @@ autorunApps =
    "killall compton",
    "xfce4-power-manager",
    "compton",
+   "nm-applet",
    "xfce4-volumed",
    --"bash /home/genisgui/.config/awesome/spotify.sh",
    "nitrogen --set-scaled --random /usr/share/backgrounds/linuxmint-ulyssa",
