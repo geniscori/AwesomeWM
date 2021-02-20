@@ -559,7 +559,7 @@ globalkeys = my_table.join(
               {description = "run dmenu", group = "launcher"}),
     -- Random Wallpaper
     awful.key({ altkey }, "r", function () 
-    awful.util.spawn("nitrogen --set-scaled --random /usr/share/backgrounds/wallpapers-derek-taylor/wallpapers/") end,
+    awful.util.spawn("nitrogen --set-scaled --random /usr/share/backgrounds/linuxmint-ulyssa/") end,
               {description = "set random wallpaper", group = "wallpapers"}),
     -- Previous Wallpaper
     awful.key({ altkey }, "p", function () 
@@ -573,11 +573,11 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "c", function () 
     awful.util.spawn("code") end,
               {description = "open visual studio", group = "launcher"}),
-    -- Anaconda-Navigator-Hotkey
+    --[[ Anaconda-Navigator-Hotkey
     awful.key({ modkey, "Control" }, "c", function () 
     awful.util.spawn("/home/genisgui/anaconda3/bin/anaconda-navigator") end,
               {description = "open anaconda-navigator", group = "launcher"}),
-    
+    --]]
     -- Apagar ordinador
     awful.key({ altkey  }, "m", function () 
     awful.util.spawn("bash /home/genisgui/.config/awesome/poweroff") end,
@@ -821,7 +821,7 @@ autorunApps =
    "compton",
    "xfce4-volumed",
    --"bash /home/genisgui/.config/awesome/spotify.sh",
-   "nitrogen --set-scaled --random /usr/share/backgrounds/wallpapers-derek-taylor/wallpapers/",
+   "nitrogen --set-scaled --random /usr/share/backgrounds/linuxmint-ulyssa",
 
 }
 if autorun then

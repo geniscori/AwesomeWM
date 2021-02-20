@@ -15,8 +15,8 @@ local os = os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
-theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/dremora"
-theme.wallpaper                                 = theme.dir .. "/wall.png"
+theme.dir                                       = os.getenv("HOME") .. "/usr/share/backgrounds/linuxmint-ulyssa"
+theme.wallpaper                                 = theme.dir .. "/lmarconnet_demigny.jpg"
 theme.font                                      = "Terminus 10.5"
 theme.taglist_font                              = "Icons 10"
 theme.fg_normal                                 = "#747474"
@@ -71,7 +71,7 @@ theme.titlebar_maximized_button_normal_active   = theme.dir .. "/icons/titlebar/
 theme.titlebar_maximized_button_focus_inactive  = theme.dir .. "/icons/titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_inactive = theme.dir .. "/icons/titlebar/maximized_normal_inactive.png"
 
-awful.util.tagnames   = { "ƀ", "Ƅ", "Ɗ", "ƈ", "ƙ" }
+awful.util.tagnames   = { "1", "2", "3", "4" }
 
 local markup     = lain.util.markup
 local separators = lain.util.separators

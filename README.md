@@ -8,7 +8,7 @@ ___
 - **compton** (transparent terminal)
 - **xfce4-power-manager** (enable function hotkeys to change display brightness)
 - **xfce4-volumed** (enable function hotkeys to inc/decrease volume)
-- **vertex** (actually using vertex theme)
+- **vertex** (actually using dremora theme)
 ---
 ### Code modifications:
 ---
@@ -30,7 +30,7 @@ ___
 
 - Added Spotify startup app initalizing in "music" workspace
 
-- Added `Anaconda` hotkey
+- Commented `Anaconda` hotkey
 
 - Changed workspace-2 tiling method
 
@@ -49,7 +49,7 @@ ___
 ---
 ### Code modifications:
 ---
-- Changed wallpaper path to `/usr/share/backgrounds/wallpapers-derek-taylor/wallpapers/`
+- Changed wallpaper path to `/usr/share/backgrounds/linuxmint-ulyssa`
 
 - Deleted and changed vertical wibox icons
 
